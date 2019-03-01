@@ -1,4 +1,5 @@
 const path = require("path");
+
 module.exports = {
   entry: {
     main: "./src/main.js"
@@ -23,6 +24,37 @@ module.exports = {
           },
           {
             loader: "css-loader"
+          }
+        ]
+      },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].html"
+            }
+          },
+          {
+            loader: "extract-loader"
+          },
+          {
+            loader: "html-loader",
+            options: {
+              attrs: ["img:src"]
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(jpg|gif|svg|png|jpeg)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "images/[name]-[hash:8].[ext]"
+            }
           }
         ]
       }
