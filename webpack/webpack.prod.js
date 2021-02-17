@@ -1,8 +1,8 @@
-const { merge } = require('webpack-merge')
-const commonConfiguration = require('./webpack.common.js')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const { merge } = require('webpack-merge');
+const commonConfiguration = require('./webpack.common.js');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
 module.exports = merge(
@@ -53,4 +53,4 @@ module.exports = merge(
       }),
     ],
   }
-)
+);

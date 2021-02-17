@@ -1,5 +1,5 @@
-const { merge } = require('webpack-merge')
-const commonConfiguration = require('./webpack.common.js')
+const { merge } = require('webpack-merge');
+const commonConfiguration = require('./webpack.common.js');
 const path = require("path");
 
 const configureDevServer = () => {
@@ -9,7 +9,7 @@ const configureDevServer = () => {
     hot: true,
     host: '0.0.0.0',
     port: 8080,
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, './dist'),
     watchContentBase: true,
     open: true,
     https: false,

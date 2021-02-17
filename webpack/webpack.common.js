@@ -1,15 +1,15 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = {
-  entry: path.resolve(__dirname, './src/js/index.js'),
+  entry: path.resolve(__dirname, '../src/js/index.js'),
   output: {
     filename: '[name].[contenthash].js',
-    path: path.resolve(__dirname, './dist')
+    path: path.resolve(__dirname, '../dist')
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, './src/index.html'),
+      template: path.resolve(__dirname, '../src/index.html'),
       minify: true
     })
   ],
@@ -59,4 +59,4 @@ module.exports = {
       }
     ]
   } 
-}
+};
